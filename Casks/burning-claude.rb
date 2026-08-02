@@ -32,13 +32,11 @@ cask "burning-claude" do
 
   caveats <<~EOS
     Burning Claude is ad-hoc signed rather than notarized, so Gatekeeper will
-    refuse to open it after a normal install. Either install it with
-
-      brew install --cask --no-quarantine burning-claude
-
-    or clear the flag afterwards:
+    refuse to open it until the quarantine flag Homebrew sets is cleared:
 
       xattr -dr com.apple.quarantine "/Applications/BurningClaude.app"
+
+    (Homebrew 6 removed the --no-quarantine flag, so this is the way.)
 
     Session keys are kept in the login keychain and are not removed by
     `brew uninstall --zap`. To delete them, search the Keychain Access app for
