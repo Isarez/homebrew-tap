@@ -1,6 +1,6 @@
 cask "burning-claude" do
-  version "1.0.0"
-  sha256 "1bcccf9d2caae356a3464199d15dab52c6e75c9017ba2bb571bd0dd025a449f9"
+  version "1.0.1"
+  sha256 "623728d5a9061f8fae7974838dff1b523b21eb96d6b8b202e9355ca35f53c382"
 
   url "https://github.com/Isarez/burning-claude/releases/download/v#{version}/BurningClaude-#{version}.zip"
   name "Burning Claude"
